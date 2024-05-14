@@ -72,14 +72,12 @@ int main(int argc, char **argv)
 		}
 		printf("dpdk-devname found port=%i "
 			   "driver=%s "
-			   "eth_dev_info_name=%s "
 			   "get_name_by_port_name=%s "
 			   "owner_id=0x%016lx "
 			   "owner_name=%s "
 			   "macaddr=%02hhx:%02hhx:%02hhx:%02hhx:%02hhx:%02hhx\n",
 			   portid,
 			   device_info.driver_name,
-			   device_info.device->name,
 			   device_name_by_port,
 			   device_owner.id,
 			   device_owner.name,
