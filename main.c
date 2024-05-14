@@ -14,7 +14,7 @@
 #include <rte_lcore.h>
 #include <rte_debug.h>
 #include <rte_ethdev.h>
-
+#include <rte_dev.h>
 
 const char usage_info[] = "usage: dpdk-devname\n";
 /* Initialization of Environment Abstraction Layer (EAL). 8< */
