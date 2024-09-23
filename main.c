@@ -17,11 +17,12 @@
 #include <rte_dev.h>
 
 const char usage_info[] = "usage: dpdk-devname\n";
-/* Initialization of Environment Abstraction Layer (EAL). 8< */
+
+/*a tiny application to print dpdk device and port id info */
 int main(int argc, char **argv)
 {
 	int ret;
-
+	/* Initialization of Environment Abstraction Layer (EAL). */
 	ret = rte_eal_init(argc, argv);
 	if (ret < 0)
 		rte_panic("Cannot init EAL\n");
@@ -95,7 +96,3 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-
-// netvsc with matching vmbus device, use that
-// netvsc without matching vmbus device name, probably management interface?
-// ownership should make difference
