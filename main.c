@@ -90,7 +90,14 @@ int main(int argc, char **argv)
 			   macaddr.addr_bytes[5]
 		);
 	}
-
+	
+	/* explicitly stop ports before cleanup */
+	for (uint16_t portid = 0; portid < RTE_MAX_ETHPORTS; portid++)
+	{
+			if (rte_eth_dev_is_valid_port(portid))
+					rte_eth_dev_stop(portid);
+	}
+	
 	/* clean up the EAL */
 	rte_eal_cleanup();
 
